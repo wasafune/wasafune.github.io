@@ -1,0 +1,24 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: pink;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  flex-direction: column;
+}
+
+#name {
+  font-size: 30px;
+  font-family: Futurama Title Font;
+}
