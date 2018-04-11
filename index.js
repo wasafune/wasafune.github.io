@@ -1,4 +1,4 @@
-console.log('expect(earth()).toBe(42)');
+console.log('expect(earth()).toBe(42);');
 
 const { body } = document;
 const style = window.getComputedStyle(body);
