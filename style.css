@@ -24,6 +24,9 @@ body {
   background-size: cover;
   background-color: var(--black-blue);
 }
+.invis {
+  opacity: 0;
+}
 
 div {
   display: flex;
