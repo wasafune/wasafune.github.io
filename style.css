@@ -7,6 +7,7 @@
   font-family: Work Sans;
   --dark-blue: #021F3D;
   --night-blue: #021733;
+  --black-blue: #010713;
   --starship-green: #1F9972;
   --lighter-starship-green: #41D3A5;
   --blueish-white: #D7ECF2;
@@ -15,7 +16,7 @@
 
 html {
   background: url(./astronomy-dark-nature.jpg) no-repeat center center fixed;
-  background-color: var(--night-blue);
+  background-color: var(--black-blue);
   background-size: cover;
 }
 
@@ -43,6 +44,7 @@ div {
   border-width: thick;
   border-color: var(--starship-green);
   border-radius: 75px;
+  box-shadow: 4px 4px 3px var(--night-blue);
 }
 #links-container {
   justify-content: space-around;
@@ -54,34 +56,67 @@ div {
   justify-content: flex-start;
   width: 100%;
   min-height: 100vh;
+  margin: 30px 0 0 0;
+  padding: 0 0 30px 0;
 }
 .project {
   flex-direction: row;
   min-height: 150px;
   width: 50%;
   margin: 10px;
+  border-style: solid;
+  border-width: medium;
+  border-color: var(--starship-green);
+  border-radius: 6px;
   background-color: var(--dark-blue);
+  box-shadow: 3px 3px 3px var(--night-blue);
+}
+.project-info {
+  flex-direction: column;
+  align-items: start;
+  width: 80%;
+  margin: 15px 0 15px 0;
+}
+.project-header {
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 0 10px 0;
 }
 .hidden {
+  display: none;
   opacity: 0;
 }
 
 h1 {
-  padding: 28px 0 18px 0;
-  text-shadow: 3px 3px 4px var(--dark-blue);
+  padding: 28px 0 10px 0;
+  text-shadow: 4px 4px 3px var(--dark-blue);
+}
+
+h2 {
+  margin: 0 12px 0 10px;
+  text-shadow: 3px 3px 3px var(--night-blue);
 }
 
 p {
-  font-size: 20px;
+  font-size: 15px;
 }
 #name {
   margin: 10px 0 25px 0;
   font-size: 55px;
   font-family: Futurama Title Font;
   color: var(--lighter-starship-green);
+  text-shadow: 5px 5px 5px var(--night-blue);
+}
+#trivia {
+  font-size: 20px;
+  text-shadow: 3px 3px 3px var(--night-blue);
 }
 #description {
   font-size: 24px;
+  text-shadow: 3px 3px 3px var(--night-blue);
+}
+.project-description {
+  margin: 0 15px 0 0;
 }
 
 a {
@@ -92,17 +127,38 @@ a {
 .welcome-link {
   margin: 0 8px;
 }
+.project-link {
+  margin: 0 8px 0 0;
+}
 
 text {
   font-size: 15px;
 }
 text:hover {
   color: white;
+  text-shadow: 3px 3px 3px var(--night-blue);
+}
+
+i {
+
+}
+.project-main-icon::before {
+  font-size: 42px;
+  padding: 0 30px 0 20px;
+}
+
+img {
+}
+.main-project-img {
+  width: 50px;
+  height: 50px;
+  padding: 0 30px 0 20px;
 }
 
 hr {
   width: 80px;
   margin-top: 14px;
+  box-shadow: 3px 3px 3px var(--night-blue);
 }
 
 @keyframes fade-in {
@@ -110,5 +166,6 @@ hr {
     to {opacity: 1;}
 }
 .fade-in-element {
+  display: flex;
   animation: fade-in 1s;
 }

@@ -1,6 +1,6 @@
 console.log('expect(earth()).toBe(42)');
 
-const projectLink = document.getElementById('project-link');
+const projectLink = document.getElementById('project-scroll');
 const projectContainer = document.getElementById('project-container');
 
 projectLink.addEventListener('click', () => {
@@ -9,6 +9,8 @@ projectLink.addEventListener('click', () => {
     block: 'start',
     inline: 'nearest',
   };
-  projectContainer.setAttribute('class', 'fade-in-element')
+  if (projectContainer.className.includes('hidden')) {
+    projectContainer.setAttribute('class', 'fade-in-element');
+  };
   projectContainer.scrollIntoView(options);
 });
