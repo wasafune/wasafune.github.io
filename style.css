@@ -14,15 +14,15 @@
   --light-blue: #C5DCE5;
 }
 
-html {
-  background: url(./astronomy-dark-nature.jpg) no-repeat center center fixed;
-  background-color: var(--black-blue);
-  background-size: cover;
-}
-
 body {
   display: flex;
   flex-direction: column;
+  background-image: url(./astronomy-dark-nature.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--black-blue);
 }
 
 div {

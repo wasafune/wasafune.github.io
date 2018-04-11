@@ -2,6 +2,9 @@ console.log('expect(earth()).toBe(42)');
 
 const projectLink = document.getElementById('project-scroll');
 const projectContainer = document.getElementById('project-container');
+const bgSrc = document.body.style.backgroundImage;
+console.log(bgSrc);
+
 
 projectLink.addEventListener('click', () => {
   const options = {
