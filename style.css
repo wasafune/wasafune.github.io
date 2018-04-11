@@ -70,7 +70,7 @@ div {
   border-style: solid;
   border-width: medium;
   border-color: var(--starship-green);
-  border-radius: 6px;
+  border-radius: 18px;
   background-color: var(--dark-blue);
   box-shadow: 3px 3px 3px var(--night-blue);
 }
