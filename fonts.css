@@ -4,11 +4,3 @@ font-style: normal;
 font-weight: normal;
 src: local('Futurama Title Font'), url('fr-title.woff') format('woff');
 }
-
-
-@font-face {
-font-family: 'Futurama Bold Font';
-font-style: normal;
-font-weight: normal;
-src: local('Futurama Bold Font'), url('fr-bold.woff') format('woff');
-}
