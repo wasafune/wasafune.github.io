@@ -1,0 +1,28 @@
+@media only screen and (max-width: 600px) {
+  #welcome-text-container {
+    width: 93%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #name {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .project {
+    width: 93%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .project-info {
+    align-items: center;
+  }
+  .project-description {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+  text, .main-project-img, .project-main-icon::before {
+    display: none;
+  }
+}
