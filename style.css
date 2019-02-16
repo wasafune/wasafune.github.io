@@ -12,6 +12,7 @@
   --lighter-starship-green: #41D3A5;
   --blueish-white: #D7ECF2;
   --light-blue: #C5DCE5;
+  --pink-red: #e4837c;
 }
 
 body {
@@ -110,7 +111,6 @@ p {
   font-size: 55px;
   font-family: Futurama Title Font;
   color: var(--lighter-starship-green);
-  text-shadow: 5px 5px 5px var(--night-blue);
 }
 #trivia {
   font-size: 20px;
@@ -173,4 +173,80 @@ hr {
 .fade-in-element {
   display: flex;
   animation: fade-in 1s;
+}
+
+/* Glitch Animation */
+
+.glitch {
+  position: relative;
+  padding: 2px 12px;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 3px;
+  text-shadow: -1px 0 var(--pink-red);
+  background: var(--dark-blue);
+  clip: rect(0px, 450px, 56px, 0);
+}
+.glitch::after {
+  left: -3px;
+  background: var(--dark-blue);
+  text-shadow: 5px 5px 5px var(--night-blue);
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip: rect(8px, 450px, 33px, 0);
+  }
+  20% {
+    clip: rect(17px, 450px, 45px, 0);
+  }
+  40% {
+    clip: rect(33px, 450px, 72px, 0);
+  }
+  60% {
+    clip: rect(3px, 450px, 38px, 0);
+  }
+  80% {
+    clip: rect(35px, 450px, 22px, 0);
+  }
+  100% {
+    clip: rect(42px, 450px, 86px, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(52px, 450px, 32px, 0);
+  }
+  20% {
+    clip: rect(6px, 450px, 82px, 0);
+  }
+  40% {
+    clip: rect(32px, 450px, 56px, 0);
+  }
+  60% {
+    clip: rect(22px, 450px, 3px, 0);
+  }
+  80% {
+    clip: rect(35px, 450px, 44px, 0);
+  }
+  100% {
+    clip: rect(13px, 450px, 44px, 0);
+  }
+}
+
+
+.glitch:hover::before {
+  animation: glitch-anim-1 0.36s linear alternate-reverse;
+}
+.glitch:hover::after {
+  animation: glitch-anim-2 0.36s linear alternate-reverse;
 }
