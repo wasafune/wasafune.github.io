@@ -25,4 +25,8 @@
   text, .main-project-img, .project-main-icon::before {
     display: none;
   }
+  .glitch::before,
+  .glitch::after {
+    display: none;
+  }
 }
