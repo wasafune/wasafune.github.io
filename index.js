@@ -5,31 +5,6 @@ const style = window.getComputedStyle(body)
 const bgSrc = style.backgroundImage
 const bgUrl = bgSrc.match(/\((.*?)\)/)[1].replace(/('|")/g,'')
 const img = new Image()
-img.onload = () => {
-  body.setAttribute('class', 'fade-in-element')
-  setTimeout(() => {
-    randomInterval(runGlitch, 3600, 16000)
-  }, 2400)
-}
-img.src = bgUrl
-if (img.complete) {
-  img.onload()
-}
-
-const projectLink = document.getElementById('project-scroll')
-const projectContainer = document.getElementById('project-container')
-
-projectLink.addEventListener('click', () => {
-  const options = {
-    behavior: 'smooth',
-    block: 'start',
-    inline: 'nearest',
-  }
-  if (projectContainer.className.includes('hidden')) {
-    projectContainer.setAttribute('class', 'fade-in-element')
-  }
-  projectContainer.scrollIntoView(options)
-})
 
 // glitch logic
 const welcomeTextCont = document.getElementById('welcome-text-container')
@@ -75,3 +50,14 @@ const randomInterval = (func, min, max, ...args) => {
 }
 
 const genRand = (min, max) => Math.floor(Math.random() * max) + min
+
+img.onload = () => {
+  body.setAttribute('class', 'fade-in-element')
+  setTimeout(() => {
+    randomInterval(runGlitch, 3600, 16000)
+  }, 2400)
+}
+img.src = bgUrl
+if (img.complete) {
+  img.onload()
+}
