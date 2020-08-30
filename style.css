@@ -133,7 +133,9 @@ a {
 }
 a:hover {
   color: white;
-  text-shadow: 3px 3px 3px var(--night-blue);
+}
+a > text:hover{
+  text-decoration: underline;
 }
 .welcome-link {
   margin: 0 8px;
